@@ -1,0 +1,122 @@
+Date: 18/03/2024  Friday
+Batch: LINGAYYAS, PSCMR
+Class DEVOPS  [morning]  : 11:00am - 12:00am
+----------------------------------------------
+Container : 
+-----------
+   
+A container is a lightweight package that contains an application's code, libraries, configuration files, and dependencies. Containers are a type of virtualization that allow applications to be moved between environments while retaining functionality. This makes containers a good solution for applications that may fail to run correctly when moved from one environment to another.
+
+OS-level virtualization, or operating system virtualization :
+------------------------------------------------------------
+ is a technology that allows multiple instances of an operating system to exist, instead of just one.           These instances are called containers, zones, virtual private servers (VPSes), partitions, virtual environments, virtual kernels, or jails. OS-level virtualization is used to improve the availability, security, and manageability of complex software environments
+
+OS-level virtualization has the following benefits:
+-----------------------------------------------------
+    Fast deployment: Containers start guests in seconds, while full VMs start in minutes.
+    Less resource requirement: Containers share the OS with the host or have no OS, so they require fewer resources.
+    
+    Flexibility: Containers provide start and stop features, which is a lightweight operation.
+    
+    Security: Containers provide a high level of security by isolating the containerized application from the  host operating system and other containers running on the same system.
+   
+    Reduced overhead: Containers incur less overhead than traditional virtual machines. 
+
+
+Docker:
+-------
+Docker is a set of platform as a service products that use OS-level virtualization to deliver software in packages called containers. Containers are isolated from one another and bundle their own software, libraries and configuration files; they can communicate with each other through well-defined channels.
+
+Software deployment is the process of making software available to be used on a system by users and other programs.
+
+Pre-requisites:
+---------------
+1. Operating System
+2. Dependent softwares	(java/nodejs/python)
+3. We can deploy applications using some command
+
+Windows   -->  
+
+need to deploy application in Linux  --> 
+
+I require vmware  -->  we can setup linux machine (some hardwares)
+				  -->  Not Based on application size and number applications in future
+				  -->  30GB (Size)
+				  -->  30min
+				  -->  Its not comfortable to us to work on linux machine
+
+We need to set up unix machine
+				  -->  vm ware
+				  -->  30GB (static amount of memory)
+				  
+Containers:
+-----------
+
+
+How to create container:
+------------------------
+OS --> softwares --> deploy
+
+1. Need to write Dockerfile
+2. We need to build Docker image
+3. We need to create container
+--------------------------------------------------
+Some Basic commands of Docker:
+------------------------------
+Installation:
+--------------
+amazon- linux
+	yum install docker -y 
+        docker version
+        sudo docker version
+        systemctl docker status/start/stop
+	service docker start
+	service docker status
+ubuntu -linux
+        sudo apt install docker.io -y
+        docker version
+        sudo docker version
+        systemctl status docker
+        systemctl start docker
+        
+Building some docker images 
+	-->  we can store images in dockerhub/ECR/ACR/Private registries
+
+dockerhub signup
+-----------------
+	
+
+
+
+What is Docker Image? 
+Docker Image can be compared to a template which is used to create Docker Containers. They are the building blocks of a Docker Container. These Docker Images are created using the build command. These Read only templates are used for creating containers by using the run command.
+
+
+Dockerfile   -->  Docker Image  -->  Docker Container
+
+Dockerfile: 
+-----------
+A Dockerfile is a text document that contains all the commands a user could call on the command line to assemble an image. Using docker build users can create an automated build that executes several command-line instructions in succession.
+
+
+Dockerfile:
+-----------
+FROM Linux/Ubuntu
+RUN yum install java-1.8.0-openjdk -y
+ENTRYPOINT ["java","-jar","jar-file-name"]
+
+Commands might be edit --> deployment will not happen properly
+
+Need to Building image on top this Dockerfile
+
+
+ docker pull vignan91/springboot-vig:latest
+
+docker pull nginx
+
+
+
+
+echo $DOCKER_PASS |  docker login --username $docker_username  --password-stdin
+docker tag $docker_username:$Tag $docker_username/$docker_username:$Tag
+docker push $docker_username/$docker_username:$Tag

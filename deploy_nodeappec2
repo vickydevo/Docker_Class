@@ -1,0 +1,25 @@
+Date: 18/03/2024  Monday
+Batch: LINGAYYAS, PSCMR
+Class DEVOPS  [morning]  : 9:00am - 11:00am
+--------------------------------------------
+
+Deploy nodejs application in local and Remote
+----------------------------------------------
+        Windows
+        -------
+        Download nodejs -->
+        Download java  
+        https://adoptium.net/temurin/releases/?os=windows&arch=x64&package=jdk&version=8
+
+
+
+
+
+Docker
+---------
+befor apart -- 
+
+Os level virtualization:
+------------------------
+
+OS-level virtualization is a technology that allows an operating system to be partitioned into multiple virtual machines (VMs) that are isolated from each other. These VMs are called containers, virtual environments, virtual kernels, zones, virtual private servers, or jails. The kernel allows for these instances to exist, and they look and feel like real servers. 
